@@ -8,74 +8,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
-    <header role="banner">
-        <nav role="navigation" class="container mx-auto p-4 flex justify-between nav">
-            <div class="logo">
-                <a href="https://github.com/Frank53rv/Frank53rv.github.io" class="text-white text-2xl font-bold">Mi Portafolio</a>
-            </div>
-            <ul class="flex space-x-4">
-                <li><a href="#infoSection" class="nav-link">Acerca de mí</a></li>
-                <li><a href="#toolsSection" class="nav-link">Herramientas</a></li>
-                <li><a href="#projectsSection" class="nav-link">Proyectos</a></li>
-                <li><a href="#contactSection" class="nav-link">Contacto</a></li>
+    <header class="bg-gray-800 text-white">
+        <nav class="container mx-auto flex justify-between items-center py-4">
+            <a href="https://github.com/Frank53rv/Frank53rv.github.io" class="text-2xl font-bold">Mi Portafolio</a>
+            <ul class="flex space-x-6">
+                <li><a href="#infoSection" class="hover:text-blue-400">Acerca de mí</a></li>
+                <li><a href="#toolsSection" class="hover:text-blue-400">Herramientas</a></li>
+                <li><a href="#projectsSection" class="hover:text-blue-400">Proyectos</a></li>
+                <li><a href="#contactSection" class="hover:text-blue-400">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main role="main" class="container mx-auto p-4">
-        <section id="infoSection" class="bg-white py-4 section">
-            <h2 class="text-3xl font-bold mb-4">Acerca de mí</h2>
-            <p class="text-lg">Soy un desarrollador web con experiencia en HTML, CSS, JavaScript y PHP. Me gusta crear sitios web y poner a prueba mis capacidades con nuevos desafíos.</p>
-            <img src="perfil1.jpg" alt="Imagen de perfil" class="w-48 h-48 rounded-full mx-auto profile-pic">
+        <section id="infoSection" class="bg-white shadow-md rounded-lg p-6 mb-8" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Acerca de mí</h2>
+            <p class="text-lg text-gray-600">
+                Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, enfocado más en el área del Backend con Ruby on Rails.
+            </p>
+            <img src="perfil1.jpg" alt="Imagen de perfil" class="w-32 h-32 rounded-full mx-auto mt-6">
         </section>
-        <section id="toolsSection" class="bg-white py-4 section">
-            <h2 class="text-3xl font-bold mb-4">Herramientas</h2>
-            <ul class="tool-grid">
-                <li class="tool-card">
-                    <i class="fab fa-html5 text-4xl text-orange-500 tool-icon"></i>
-                    <p class="text-lg">HTML</p>
+        <section id="toolsSection" class="bg-gray-100 shadow-md rounded-lg p-6 mb-8" data-aos="zoom-in">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Herramientas</h2>
+            <ul class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                <li class="flex flex-col items-center">
+                    <i class="fab fa-html5 text-6xl text-orange-500"></i>
+                    <p class="text-lg font-medium text-gray-700 mt-2">HTML</p>
                 </li>
-                <li class="tool-card">
-                    <i class="fab fa-css3-alt text-4xl text-blue-500 tool-icon"></i>
-                    <p class="text-lg">CSS</p>
+                <li class="flex flex-col items-center">
+                    <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
+                    <p class="text-lg font-medium text-gray-700 mt-2">CSS</p>
                 </li>
-                <li class="tool-card">
-                    <i class="fab fa-js text-4xl text-yellow-500 tool-icon"></i>
-                    <p class="text-lg">JavaScript</p>
+                <li class="flex flex-col items-center">
+                    <i class="fab fa-js text-6xl text-yellow-500"></i>
+                    <p class="text-lg font-medium text-gray-700 mt-2">JavaScript</p>
                 </li>
-                <li class="tool-card">
-                    <i class="fab fa-php text-4xl text-purple-500 tool-icon"></i>
-                    <p class="text-lg">PHP</p>
+                <li class="flex flex-col items-center">
+                    <i class="fas fa-gem text-6xl text-red-500"></i>
+                    <p class="text-lg font-medium text-gray-700 mt-2">Ruby</p>
                 </li>
-                <li class="tool-card">
-                    <i class="fas fa-database text-4xl text-green-500 tool-icon"></i>
-                    <p class="text-lg">SQL</p>
+                <li class="flex flex-col items-center">
+                    <i class="fas fa-database text-6xl text-blue-500"></i>
+                    <p class="text-lg font-medium text-gray-700 mt-2">PostgreSQL</p>
                 </li>
-                <li class="tool-card">
-                    <i class="fab fa-bootstrap text-4xl text-pink-500 tool-icon"></i>
-                    <p class="text-lg">Bootstrap</p>
+                <li class="flex flex-col items-center">
+                    <i class="fab fa-ubuntu text-6xl text-orange-600"></i>
+                    <p class="text-lg font-medium text-gray-700 mt-2">Ubuntu</p>
                 </li>
             </ul>
         </section>
-        <section id="projectsSection" class="bg-white py-4 section">
-            <h2 class="text-3xl font-bold mb-4">Proyectos</h2>
-            <div class="project-grid">
-                <article class="project">
-                    <img src="proyecto1.png" alt="Imagen del proyecto 1" class="project-img">
-                    <h3 class="text-2xl font-bold mb-2">Proyecto 1: CRUD simple con LocalStorage</h3>
-                    <p class="text-lg">Desarrollé un sitio web con funciones de un CRUD básico con almacenamiento en el LocalStorage utilizando HTML, CSS, Bootstrap y JavaScript.</p>
-                    <a href="https://github.com/davihtd/DW2_TP" target="_blank" class="btn btn-primary">Ver proyecto</a>
+        <section id="projectsSection" class="bg-white shadow-md rounded-lg p-6 mb-8" data-aos="fade-right">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Proyectos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <article class="bg-gray-100 rounded-lg shadow p-4" data-aos="flip-left">
+                    <img src="proyecto1.png" alt="Imagen del proyecto 1" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mt-4">Proyecto 1</h3>
+                    <p class="text-gray-600 mt-2">CRUD básico con LocalStorage utilizando HTML, CSS, Bootstrap y JavaScript.</p>
+                    <a href="https://github.com/davihtd/DW2_TP" target="_blank" class="text-blue-500 hover:underline mt-4 block">Ver proyecto</a>
                 </article>
-                <article class="project">
-                    <img src="proyecto2.png" alt="Imagen del proyecto 2" class="project-img">
-                    <h3 class="text-2xl font-bold mb-2">Proyecto 2: CRUD con Base de datos</h3>
-                    <p class="text-lg">Creé un CRUD con una base de datos utilizando PHP y conecté todo mediante una API a través de Ajax, utilizando HTML, PHP, Ajax y SQL.</p>
-                    <a href="https://github.com/Frank53rv/CrudConPHPyAjax-y-todaesabaina/tree/main/CRUD_PH" target="_blank" class="btn btn-primary">Ver proyecto</a>
+                <article class="bg-gray-100 rounded-lg shadow p-4" data-aos="flip-right">
+                    <img src="proyecto2.png" alt="Imagen del proyecto 2" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mt-4">Proyecto 2</h3>
+                    <p class="text-gray-600 mt-2">CRUD con base de datos utilizando PHP, Ajax y SQL.</p>
+                    <a href="https://github.com/Frank53rv/CrudConPHPyAjax-y-todaesabaina/tree/main/CRUD_PH" target="_blank" class="text-blue-500 hover:underline mt-4 block">Ver proyecto</a>
                 </article>
             </div>
         </section>
-           <section id="languagesSection" class="bg-gray-100 py-4 section">
+        <section id="languagesSection" class="bg-gray-100 py-4 section" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-4">Idiomas</h2>
             <ul class="flex justify-center space-x-4">
                 <li>
@@ -86,13 +88,9 @@
                     <img src="usa.jpg" alt="Bandera de Inglaterra" class="w-12 h-12 rounded-full">
                     <p class="text-lg font-semibold">Inglés</p>
                 </li>
-                <li>
-                    <img src="japon.jpg" alt="Bandera de Francia" class="w-12 h-12 rounded-full">
-                    <p class="text-lg font-semibold">Japonés</p>
-                </li>
             </ul>
         </section>
-        <section id="contactSection" class="bg-white py-4 section">
+        <section id="contactSection" class="bg-white py-4 section" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-4">Contacto</h2>
             <p class="text-lg">Puedes contactarme a través de mi correo electrónico <a href="mailto:frankitov23@gmail.com">frankitov23@gmail.com</a> o mediante mi perfil de LinkedIn.</p>
             <ul class="flex justify-center">
@@ -114,11 +112,17 @@
             </ul>
         </section>
     </main>
-    <footer role="contentinfo" class="bg-gray-900 py-4">
-        <p class="text-white text-lg">&copy; Franco Vergara </p>
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p class="text-sm">&copy; 2025 Franco Vergara. Todos los derechos reservados.</p>
     </footer>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
